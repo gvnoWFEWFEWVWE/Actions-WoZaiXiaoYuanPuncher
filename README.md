@@ -1,15 +1,5 @@
 # WoZaiXiaoYuanPuncher-Actions
 
-<details>
-<summary><b>⚠️ 2022-11-02 我在校园更新，项目当前不可用！</b></summary>
-- 我在校园调整了打卡项目。原“健康打卡”&“日检日报”打卡项目合并为新“日检日报”
-- 新“日检日报”打卡项目使用了新的提交接口，旧接口虽然能成功提交但实际显示未打卡。
-
-😥 由于个人原因，短期内我暂时难以投入时间进行适配。
-
-🥰 欢迎有能力的朋友提交Pull Request，万分感谢！
-</details>
-
 我在校园自动打卡程序：[zimin9/WoZaiXiaoYuanPuncher](https://github.com/zimin9/WoZaiXiaoYuanPuncher) 的 Github Action 版。
 
 基于原仓库中 [@Chorer](https://github.com/Chorer) 贡献的腾讯云函数版脚本修改。
@@ -124,13 +114,7 @@
 
   - `CITY`：打卡该项目时所提交位置信息的城市名。
 
-  - `ADDRESS_RECOMMEND`：打卡时所提交位置信息的学校名/地点名。
-
-    **⚠注意：** 请填写[腾讯地图服务 - 地图坐标拾取器](https://lbs.qq.com/getPoint/)中检索到的学校名/地点名
-    
-    示例：
-    ![image.png](https://s2.loli.net/2022/10/23/gxyQenF1uWYithb.png)
-
+  - `ADDRESS`：打卡时所提交位置信息的学校名/地点名（请详细到门牌号且加上城市名称，e.g：北京市海淀区双清路30号清华大学）。
 
     > 如需两个打卡项目提交不同的地理位置信息（如“日检日报”在校打卡，“健康打卡”在家打卡），请参考文末“常见问题 - 3.如何配置多账户/多地点打卡？” 
 
@@ -348,6 +332,8 @@
 6. 其他问题？
    - 欢迎提 issue。
 
+  <details>
+
 ## 抓包大致方法
 
 ![cap-howto](https://i.loli.net/2021/08/07/VBrtzGnQEJc5XF4.png)
@@ -368,6 +354,8 @@
 
   - [Liuism/xsyu-wzxy-sign](https://github.com/Liuism/xsyu-wzxy-sign)
 
+  <details>  
+  
 ## Todo
 
 - [ ] 解耦推送模块
