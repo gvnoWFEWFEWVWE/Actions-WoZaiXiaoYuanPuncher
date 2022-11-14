@@ -7,7 +7,7 @@ on:
 
   schedule:
   # Github Action 使用世界标准时间（UTC），北京时间（UTC+8）转换为世界标准时需要减去8小时
-    - cron:  '30 23 * * *' # 默认在每天 UTC 23:30 （北京时间 7:30）执行
+    - cron:  '0 5,21 * * *' # 默认在每天 UTC 23:30 （北京时间 7:30）执行
 
 jobs:
   USER_01:
@@ -44,8 +44,7 @@ jobs:
         TG_CHATID: ${{secrets.TG_CHATID}}
         WZXY_USERNAME: ${{secrets.USERNAME}}
         WZXY_PASSWORD: ${{secrets.PASSWORD}}
-        WZXY_CITY: ${{secrets.CITY}}
-        ADDRESS_RECOMMEND: ${{secrets.RECOMMEND}}
+        WZXY_ADDRESS: ${{secrets.ADDRESS}}
       run: python wzxy-dailyreport.py
 
   ## 多账户配置示例，请复制下面的代码后取消注释再修改，粘贴时注意缩进
@@ -83,6 +82,5 @@ jobs:
   #       TG_CHATID: ${{secrets.TG_CHATID}}
   #       WZXY_USERNAME: ${{secrets.USERNAME}}
   #       WZXY_PASSWORD: ${{secrets.PASSWORD}}
-  #       WZXY_CITY: ${{secrets.CITY}}
-  #       ADDRESS_RECOMMEND: ${{secrets.RECOMMEND}}
+  #       WZXY_ADDRESS: ${{secrets.ADDRESS}}
   #     run: python wzxy-dailyreport.py
